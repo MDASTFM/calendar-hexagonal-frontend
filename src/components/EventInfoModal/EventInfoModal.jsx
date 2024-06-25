@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, Box, Typography } from "@mui/material";
+import './EventInfoModal.module.css';
 
 const EventInfoModal = ({ open, handleClose, onDeleteEvent, currentEvent }) => {
   const onClose = () => {

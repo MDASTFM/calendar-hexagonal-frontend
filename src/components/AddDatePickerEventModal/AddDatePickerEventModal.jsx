@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { LocalizationProvider, DateTimePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import './AddDatePickerEventModal.module.css';
 
 const AddDatePickerEventModal = ({
   open,

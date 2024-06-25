@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Typography } from "@mui/material";
+import './EventInfo.module.css';
 
 const EventInfo = ({ event }) => {
   return (

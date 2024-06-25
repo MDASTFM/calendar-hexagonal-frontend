@@ -10,6 +10,7 @@ import {
   Autocomplete,
   Box,
 } from "@mui/material";
+import './AddEventModal.module.css';
 
 const AddEventModal = ({ open, handleClose, eventFormData, setEventFormData, onAddEvent, todos }) => {
   const { description } = eventFormData;

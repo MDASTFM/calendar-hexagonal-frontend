@@ -16,9 +16,9 @@ import {
   TextField,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-
 import { HexColorPicker } from "react-colorful";
-import { generateId } from "./EventCalendar";
+import { generateId } from "../EventCalendar/EventCalendar";
+import './AddTodoModal.module.css';
 
 const AddTodoModal = ({ open, handleClose, todos, setTodos }) => {
   const [color, setColor] = useState("#b32aa9");
