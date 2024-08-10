@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 import startOfWeek from 'date-fns/startOfWeek';
@@ -12,6 +12,7 @@ import AddEventModal from '../AddEventModal/AddEventModal';
 import EventInfoModal from '../EventInfoModal/EventInfoModal';
 import AddTodoModal from '../AddTodoModal/AddTodoModal';
 import styles from './EventCalendar.module.css';
+import { Link } from 'react-router-dom';
 
 const locales = { 'en-US': enUS };
 const localizer = dateFnsLocalizer({
@@ -60,11 +61,24 @@ const EventCalendar = () => {
 
   return (
     <Box className={styles.appContainer}>
-      <AddEventForm
-        eventFormData={eventFormData}
-        setEventFormData={setEventFormData}
-        onAddEvent={handleAddEvent}
-      />
+       <Box className={styles.sidebar}>
+        {/* Enlaces para Login y Registro */}
+        <Link to="/login">
+          <Button variant="contained" fullWidth>
+            Login
+          </Button>
+        </Link>
+        <Link to="/register">
+          <Button variant="contained" fullWidth>
+            Register
+          </Button>
+        </Link>
+        <AddEventForm
+          eventFormData={eventFormData}
+          setEventFormData={setEventFormData}
+          onAddEvent={handleAddEvent}
+        />
+      </Box>
       <Box className={styles.mainContent}>
         <Calendar
           localizer={localizer}
